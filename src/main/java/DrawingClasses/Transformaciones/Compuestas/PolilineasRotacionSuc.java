@@ -117,32 +117,35 @@ public class PolilineasRotacionSuc extends JFrame {
         add(planoCartesiano, BorderLayout.CENTER);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Adjust preferred size
+        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
         JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
-        // Panel for original table
+        // Panel para tabla original
         JPanel originalTablePanel = new JPanel(new BorderLayout());
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
         originalLabel.setFont(new Font("Arial", Font.BOLD, 12));
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
+        originalScrollPane.setPreferredSize(new Dimension(300, 150));
         originalTablePanel.add(originalScrollPane, BorderLayout.CENTER);
 
-        // Panel for first rotation table
+        // Panel para primera rotación
         JPanel firstRotationPanel = new JPanel(new BorderLayout());
         rotationTable1Label = new JLabel("Primera Rotación (θ1 = 0°)", SwingConstants.CENTER);
         rotationTable1Label.setFont(new Font("Arial", Font.BOLD, 12));
         firstRotationPanel.add(rotationTable1Label, BorderLayout.NORTH);
         JScrollPane firstRotationScrollPane = new JScrollPane(firstRotationTable);
+        firstRotationScrollPane.setPreferredSize(new Dimension(300, 150));
         firstRotationPanel.add(firstRotationScrollPane, BorderLayout.CENTER);
 
-        // Panel for second rotation table
+        // Panel para segunda rotación
         JPanel secondRotationPanel = new JPanel(new BorderLayout());
         rotationTable2Label = new JLabel("Segunda Rotación (θ2 = 0°)", SwingConstants.CENTER);
         rotationTable2Label.setFont(new Font("Arial", Font.BOLD, 12));
         secondRotationPanel.add(rotationTable2Label, BorderLayout.NORTH);
         JScrollPane secondRotationScrollPane = new JScrollPane(secondRotationTable);
+        secondRotationScrollPane.setPreferredSize(new Dimension(300, 150));
         secondRotationPanel.add(secondRotationScrollPane, BorderLayout.CENTER);
 
         tablesPanel.add(originalTablePanel);
@@ -178,6 +181,7 @@ public class PolilineasRotacionSuc extends JFrame {
         rightPanel.add(controlPanel, BorderLayout.NORTH);
         add(rightPanel, BorderLayout.EAST);
     }
+
     private void addActionListeners() {
         backButton.addActionListener(e -> {
             new TransformacionesCompuestas().setVisible(true);

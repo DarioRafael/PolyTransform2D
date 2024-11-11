@@ -4,7 +4,7 @@ import DrawingClasses.Transformaciones.Compuestas.PolilineasEscalacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasRotacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasTraslacionSuc;
 import PaginaPrincipalFolder.Settings.AjustesVariables;
-import PaginaPrincipalFolder.Transformaciones.PrincipalTransformaciones;
+import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
 
 import javax.swing.*;
 import java.awt.*;
@@ -101,7 +101,7 @@ public class TransformacionesCompuestas extends JFrame {
 
         backButton.addActionListener(e -> {
             dispose();
-            PrincipalTransformaciones.main(new String[]{});
+            MenuTransformaciones.main(new String[]{});
         });
 
         // Nota informativa

@@ -1,6 +1,7 @@
 package PaginaPrincipalFolder.Transformaciones;
 
 import PaginaPrincipalFolder.Settings.AjustesVentana;
+import PaginaPrincipalFolder.Settings.CreditosParaFG;
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesBasicas;
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesCompuestas;
 
@@ -8,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class PrincipalTransformaciones {
+public class MenuTransformaciones {
     private static final Color BACKGROUND_COLOR = new Color(245, 245, 250);
     private static final Color BUTTON_COLOR = new Color(70, 130, 180);
     private static final Color HOVER_COLOR = new Color(100, 149, 237);
@@ -41,13 +42,14 @@ public class PrincipalTransformaciones {
         headerPanel.add(titleLabel, BorderLayout.CENTER);
 
         // Panel central con botones
-        JPanel buttonPanel = new JPanel(new GridLayout(2, 1, 20, 20));
+        JPanel buttonPanel = new JPanel(new GridLayout(3, 1, 20, 20));
         buttonPanel.setBackground(BACKGROUND_COLOR);
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(40, 100, 40, 100));
 
         // Creación de botones personalizados
         JButton basicasButton = createStyledButton("Transformaciones Geométricas 2D Básicas", "Traslación, Escalación y Rotación");
         JButton compuestasButton = createStyledButton("Transformaciones Geométricas 2D Compuestas", "Transformaciones sucesivas");
+        JButton creditosButton = createStyledButton("Creditos", "Dario Rafael & Juan Carlos");
 
         basicasButton.addActionListener(e -> {
             frame.dispose();
@@ -59,8 +61,14 @@ public class PrincipalTransformaciones {
             new TransformacionesCompuestas();
         });
 
+        creditosButton.addActionListener(e -> {
+            frame.dispose();
+            new CreditosParaFG().setVisible(true);
+        });
+
         buttonPanel.add(basicasButton);
         buttonPanel.add(compuestasButton);
+        buttonPanel.add(creditosButton);
 
         // Panel inferior con créditos
         JPanel footerPanel = new JPanel(new BorderLayout());

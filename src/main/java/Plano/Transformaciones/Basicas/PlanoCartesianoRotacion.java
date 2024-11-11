@@ -34,8 +34,6 @@ public class PlanoCartesianoRotacion extends JPanel {
     private static final Color COLOR_LINEA_ROTADA = new Color(255, 140, 0);
 
     public PlanoCartesianoRotacion() {
-        offsetX = -GRID_SIZE * 4; // Desplazar hacia la derecha
-        offsetY = GRID_SIZE * 4; // Desplazar hacia arriba
         zoomFactor = 0.7; // Ajustar el zoom inicial a 0.8x
         setupMouseListeners();
     }

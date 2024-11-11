@@ -5,7 +5,7 @@ import DrawingClasses.Transformaciones.Basicas.PolilineasRotacion;
 import DrawingClasses.Transformaciones.Basicas.PolilineasTraslacion;
 import PaginaPrincipalFolder.Settings.AjustesVariables;
 import PaginaPrincipalFolder.Settings.AjustesVentana;
-import PaginaPrincipalFolder.Transformaciones.PrincipalTransformaciones;
+import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
 
 import javax.swing.*;
 import java.awt.*;
@@ -94,7 +94,7 @@ public class TransformacionesBasicas extends JFrame {
 
         backButton.addActionListener(e -> {
             dispose();
-            PrincipalTransformaciones.main(new String[]{});
+            MenuTransformaciones.main(new String[]{});
         });
 
         bottomPanel.add(backButton);
