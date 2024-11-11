@@ -94,6 +94,7 @@ public class PolilineasTraslacion extends JFrame {
 
         // Panel derecho con las dos tablas
         JPanel rightPanel = new JPanel(new BorderLayout());
+        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
         // Panel para las tablas
         JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
