@@ -56,8 +56,8 @@ public class PolilineasTraslacion extends JFrame {
         tyField = new JTextField("0", 5);
 
         backButton = new JButton("Menu");
-        regenerarFigura = new JButton("Generar figura");
-        trasladarButton = new JButton("Trasladar figura");
+        regenerarFigura = new JButton("Graficar");
+        trasladarButton = new JButton("Trasladar");
 
         // ComboBox para seleccionar el aumento
         String[] aumentoOptions = {"x1", "x2", "x4", "x8", "x16"};

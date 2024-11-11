@@ -49,8 +49,8 @@ public class PolilineasRotacion extends JFrame {
         anguloField = new JTextField("0", 5);
 
         backButton = new JButton("Menu");
-        regenerarFigura = new JButton("Generar figura");
-        rotarButton = new JButton("Rotar figura");
+        regenerarFigura = new JButton("Graficar");
+        rotarButton = new JButton("Rotar");
 
         // ComboBox para seleccionar el aumento
         String[] aumentoOptions = {"x1", "x2", "x4", "x8", "x16"};

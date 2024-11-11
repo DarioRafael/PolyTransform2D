@@ -73,9 +73,9 @@ public class PolilineasTraslacionSuc extends JFrame {
         ty2Field = new JTextField("-4", 5);
 
         backButton = new JButton("Menu");
-        regenerarFigura = new JButton("Generar figura");
-        trasladar1Button = new JButton("Primera Traslación");
-        trasladar2Button = new JButton("Segunda Traslación");
+        regenerarFigura = new JButton("Graficar");
+        trasladar1Button = new JButton("Trasladar");
+        trasladar2Button = new JButton("Trasladar");
         trasladar2Button.setEnabled(false);
 
         String[] aumentoOptions = {"x1", "x2", "x4", "x8", "x16"};

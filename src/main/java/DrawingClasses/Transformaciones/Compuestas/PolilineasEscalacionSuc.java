@@ -66,9 +66,9 @@ public class PolilineasEscalacionSuc extends JFrame {
         sy2Field = new JTextField("1", 5);
 
         backButton = new JButton("Menu");
-        regenerarFigura = new JButton("Generar figura");
-        escalarButton1 = new JButton("Primera escalación");
-        escalarButton2 = new JButton("Segunda escalación");
+        regenerarFigura = new JButton("Graficar");
+        escalarButton1 = new JButton("Escalar");
+        escalarButton2 = new JButton("Escalar");
 
         String[] aumentoOptions = {"x1", "x2", "x4", "x8", "x16"};
         aumentoComboBox = new JComboBox<>(aumentoOptions);

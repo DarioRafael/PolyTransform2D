@@ -62,9 +62,9 @@ public class PolilineasRotacionSuc extends JFrame {
         segundoAnguloField = new JTextField("90", 5);
 
         backButton = new JButton("Menu");
-        regenerarFigura = new JButton("Generar figura");
-        primerRotacionButton = new JButton("Aplicar primera rotación");
-        segundaRotacionButton = new JButton("Aplicar segunda rotación");
+        regenerarFigura = new JButton("Graficar");
+        primerRotacionButton = new JButton("Rotar");
+        segundaRotacionButton = new JButton("Rotar");
         segundaRotacionButton.setEnabled(false);
 
         String[] aumentoOptions = {"x1", "x2", "x4", "x8", "x16"};
@@ -83,8 +83,8 @@ public class PolilineasRotacionSuc extends JFrame {
         firstRotationTable = new JTable(firstRotationTableModel);
         secondRotationTable = new JTable(secondRotationTableModel);
 
-        primerAnguloLabel = new JLabel("Primera rotación: 0°", SwingConstants.CENTER);
-        segundoAnguloLabel = new JLabel("Segunda rotación: 0°", SwingConstants.CENTER);
+        primerAnguloLabel = new JLabel("θ1: 0°", SwingConstants.CENTER);
+        segundoAnguloLabel = new JLabel("θ2: 0°", SwingConstants.CENTER);
         primerAnguloLabel.setFont(new Font("Arial", Font.BOLD, 12));
         segundoAnguloLabel.setFont(new Font("Arial", Font.BOLD, 12));
     }
@@ -158,11 +158,11 @@ public class PolilineasRotacionSuc extends JFrame {
         controlPanel.add(regenerarFigura);
         controlPanel.add(new JSeparator());
         controlPanel.add(new JSeparator());
-        controlPanel.add(new JLabel("Primer ángulo:"));
+        controlPanel.add(new JLabel("θ1:"));
         controlPanel.add(primerAnguloField);
         controlPanel.add(new JLabel(""));
         controlPanel.add(primerRotacionButton);
-        controlPanel.add(new JLabel("Segundo ángulo:"));
+        controlPanel.add(new JLabel("θ2:"));
         controlPanel.add(segundoAnguloField);
         controlPanel.add(new JLabel(""));
         controlPanel.add(segundaRotacionButton);
@@ -215,7 +215,7 @@ public class PolilineasRotacionSuc extends JFrame {
             dibujarFigura(primeraRotacionList, true, 2);
             updateRotatedTable(primeraRotacionList, firstRotationTableModel);
 
-            primerAnguloLabel.setText("Primera rotación: " + primerAnguloField.getText() + "°");
+            primerAnguloLabel.setText("θ1 " + primerAnguloField.getText() + "°");
             primeraRotacionCompletada = true;
             segundaRotacionButton.setEnabled(true);
 
@@ -243,7 +243,7 @@ public class PolilineasRotacionSuc extends JFrame {
             dibujarFigura(segundaRotacionList, true, 3);
             updateRotatedTable2(segundaRotacionList, secondRotationTableModel);
 
-            segundoAnguloLabel.setText("Segunda rotación: " + segundoAnguloField.getText() + "°");
+            segundoAnguloLabel.setText("θ2: " + segundoAnguloField.getText() + "°");
 
             planoCartesiano.repaint();
         } catch (NumberFormatException ex) {
@@ -324,7 +324,7 @@ public class PolilineasRotacionSuc extends JFrame {
                     String.format("%.2f", punto.getY())
             });
         }
-        rotationTable2Label.setText(String.format("Primera rotación: %s°", segundoAnguloField.getText()));
+        rotationTable2Label.setText(String.format("Segunda rotación: %s°", segundoAnguloField.getText()));
     }
 
     public void drawFiguraOriginal(double xInicio, double yInicio, double aumento) {
