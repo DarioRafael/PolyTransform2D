@@ -59,6 +59,8 @@ public class PolilineasTraslacionSuc extends JFrame {
         setVisible(true);
     }
 
+
+    //coment
     private void createComponents() {
         planoCartesiano = new PlanoCartesianoTraslacion();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
