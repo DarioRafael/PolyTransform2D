@@ -3,6 +3,8 @@ package PaginaPrincipalFolder.Transformaciones.Componentes;
 import DrawingClasses.Transformaciones.Basicas.PolilineasEscalacion;
 import DrawingClasses.Transformaciones.Basicas.PolilineasRotacion;
 import DrawingClasses.Transformaciones.Basicas.PolilineasTraslacion;
+import PaginaPrincipalFolder.Settings.AjustesVariables;
+import PaginaPrincipalFolder.Settings.AjustesVentana;
 import PaginaPrincipalFolder.Transformaciones.PrincipalTransformaciones;
 
 import javax.swing.*;
@@ -14,6 +16,8 @@ public class TransformacionesBasicas extends JFrame {
     private static final Color BACKGROUND_COLOR = new Color(245, 245, 250);
     private static final Color BUTTON_COLOR = new Color(70, 130, 180);
     private static final Color HOVER_COLOR = new Color(100, 149, 237);
+    public AjustesVentana ajustesVentana = new AjustesVentana();
+    public AjustesVariables ajustesVariables = new AjustesVariables();
 
     public TransformacionesBasicas() {
         setTitle("Transformaciones Básicas en 2D");
@@ -42,24 +46,28 @@ public class TransformacionesBasicas extends JFrame {
         traslacionButton.addActionListener(e -> {
             dispose();
             PolilineasTraslacion frame = new PolilineasTraslacion();
-            frame.drawFiguraOriginal(2, 2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
+            frame.txField.setText("1");
+            frame.tyField.setText("2");
         });
 
         escalacionButton.addActionListener(e -> {
             dispose();
             PolilineasEscalacion frame = new PolilineasEscalacion();
-            frame.drawFiguraOriginal(2,2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
+            frame.sxField.setText("1");
+            frame.syField.setText("2");
 
         });
 
         rotacionButton.addActionListener(e -> {
             dispose();
             PolilineasRotacion frame = new PolilineasRotacion();
-            frame.drawFiguraOriginal(2, 2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
-
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
+            frame.anguloField.setText("90");
         });
 
         buttonPanel.add(traslacionButton);

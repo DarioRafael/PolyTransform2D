@@ -21,8 +21,8 @@ public class PolilineasTraslacion extends JFrame {
     private JButton backButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
-    private JTextField txField;
-    private JTextField tyField;
+    public JTextField txField;
+    public JTextField tyField;
     private JLabel txLabel;
     private JLabel tyLabel;
     public JComboBox<String> aumentoComboBox;
@@ -50,8 +50,8 @@ public class PolilineasTraslacion extends JFrame {
         planoCartesiano = new PlanoCartesianoTraslacion();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
 
-        xInicialField = new JTextField("2", 5);
-        yInicialField = new JTextField("2", 5);
+        xInicialField = new JTextField("1", 5);
+        yInicialField = new JTextField("1", 5);
         txField = new JTextField("0", 5);
         tyField = new JTextField("0", 5);
 

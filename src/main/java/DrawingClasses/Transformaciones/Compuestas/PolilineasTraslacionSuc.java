@@ -65,12 +65,12 @@ public class PolilineasTraslacionSuc extends JFrame {
         planoCartesiano = new PlanoCartesianoTraslacion();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
 
-        xInicialField = new JTextField("2", 5);
-        yInicialField = new JTextField("2", 5);
-        tx1Field = new JTextField("0", 5);
-        ty1Field = new JTextField("0", 5);
-        tx2Field = new JTextField("0", 5);
-        ty2Field = new JTextField("0", 5);
+        xInicialField = new JTextField("1", 5);
+        yInicialField = new JTextField("1", 5);
+        tx1Field = new JTextField("1", 5);
+        ty1Field = new JTextField("2", 5);
+        tx2Field = new JTextField("-2", 5);
+        ty2Field = new JTextField("-4", 5);
 
         backButton = new JButton("Menu");
         regenerarFigura = new JButton("Generar figura");

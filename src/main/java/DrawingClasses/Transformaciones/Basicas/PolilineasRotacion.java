@@ -21,7 +21,7 @@ public class PolilineasRotacion extends JFrame {
     private JButton backButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
-    private JTextField anguloField;
+    public JTextField anguloField;
     private JLabel anguloLabel;
     private JButton regenerarFigura;
     private JButton rotarButton;
@@ -45,8 +45,8 @@ public class PolilineasRotacion extends JFrame {
         planoCartesiano = new PlanoCartesianoRotacion();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
 
-        xInicialField = new JTextField("2", 5);
-        yInicialField = new JTextField("2", 5);
+        xInicialField = new JTextField("1", 5);
+        yInicialField = new JTextField("1", 5);
         anguloField = new JTextField("0", 5);
 
         backButton = new JButton("Menu");

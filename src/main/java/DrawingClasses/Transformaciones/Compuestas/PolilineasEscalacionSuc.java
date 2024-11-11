@@ -58,10 +58,10 @@ public class PolilineasEscalacionSuc extends JFrame {
         planoCartesiano = new PlanoCartesianoEscalacionSuc();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
 
-        xInicialField = new JTextField("2", 5);
-        yInicialField = new JTextField("2", 5);
+        xInicialField = new JTextField("1", 5);
+        yInicialField = new JTextField("1", 5);
         sx1Field = new JTextField("1", 5);
-        sy1Field = new JTextField("1", 5);
+        sy1Field = new JTextField("2", 5);
         sx2Field = new JTextField("1", 5);
         sy2Field = new JTextField("1", 5);
 

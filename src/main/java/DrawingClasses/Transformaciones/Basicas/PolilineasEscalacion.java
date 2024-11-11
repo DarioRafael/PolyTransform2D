@@ -21,8 +21,8 @@ public class PolilineasEscalacion extends JFrame {
     private JButton backButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
-    private JTextField sxField;
-    private JTextField syField;
+    public JTextField sxField;
+    public JTextField syField;
     private JLabel sxLabel;
     private JLabel syLabel;
     public JComboBox<String> aumentoComboBox;
@@ -49,8 +49,8 @@ public class PolilineasEscalacion extends JFrame {
         planoCartesiano = new PlanoCartesianoEscalacion();
         planoCartesiano.setPreferredSize(new Dimension(600, 400));
 
-        xInicialField = new JTextField("2", 5);
-        yInicialField = new JTextField("2", 5);
+        xInicialField = new JTextField("1", 5);
+        yInicialField = new JTextField("1", 5);
         sxField = new JTextField("1", 5);
         syField = new JTextField("1", 5);
 

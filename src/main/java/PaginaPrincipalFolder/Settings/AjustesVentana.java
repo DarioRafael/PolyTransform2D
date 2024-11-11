@@ -8,7 +8,6 @@ public class AjustesVentana {
     public AjustesVentana() {
         this.windowSize = new Dimension(800, 600);
     }
-
     public Dimension getWindowSize() {
         return windowSize;
     }

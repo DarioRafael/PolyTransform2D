@@ -182,7 +182,7 @@ public class PlanoCartesianoEscalacionSuc extends JPanel {
         g2.drawString(prefix + "Y", LABEL_OFFSET, (int) (-offsetY - viewportHeight / 2) + LABEL_OFFSET);
         g2.drawString("-" + prefix + "Y", LABEL_OFFSET, (int) (-offsetY + viewportHeight / 2) - LABEL_OFFSET);
 
-        g2.setFont(new Font("Arial", Font.PLAIN, 10));
+        g2.setFont(new Font("Arial", Font.BOLD, 14));
 
         // Dibujar las marcas y números en los ejes
         int startX = (int) Math.floor((-offsetX - viewportWidth / 2) / GRID_SIZE);

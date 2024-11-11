@@ -3,6 +3,7 @@ package PaginaPrincipalFolder.Transformaciones.Componentes;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasEscalacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasRotacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasTraslacionSuc;
+import PaginaPrincipalFolder.Settings.AjustesVariables;
 import PaginaPrincipalFolder.Transformaciones.PrincipalTransformaciones;
 
 import javax.swing.*;
@@ -15,6 +16,9 @@ public class TransformacionesCompuestas extends JFrame {
     private static final Color BUTTON_COLOR = new Color(70, 130, 180);
     private static final Color HOVER_COLOR = new Color(100, 149, 237);
     private static final Color SEPARATOR_COLOR = new Color(200, 200, 220);
+
+    public AjustesVariables ajustesVariables = new AjustesVariables();
+
 
     public TransformacionesCompuestas() {
         setTitle("Transformaciones Compuestas en 2D");
@@ -59,22 +63,22 @@ public class TransformacionesCompuestas extends JFrame {
         traslacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasTraslacionSuc frame = new PolilineasTraslacionSuc();
-            frame.drawFiguraOriginal(2, 2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
         });
 
         escalacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasEscalacionSuc frame = new PolilineasEscalacionSuc();
-            frame.drawFiguraOriginal(2, 2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
         });
 
         rotacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasRotacionSuc frame = new PolilineasRotacionSuc();
-            frame.drawFiguraOriginal(2, 2, 2);
-            frame.aumentoComboBox.setSelectedIndex(1);
+            frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
+            frame.aumentoComboBox.setSelectedIndex(0);
         });
 
         // Agregar los botones al panel
