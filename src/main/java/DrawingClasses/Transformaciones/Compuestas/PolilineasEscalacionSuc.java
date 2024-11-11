@@ -63,7 +63,7 @@ public class PolilineasEscalacionSuc extends JFrame {
         sx1Field = new JTextField("1", 5);
         sy1Field = new JTextField("2", 5);
         sx2Field = new JTextField("1", 5);
-        sy2Field = new JTextField("1", 5);
+        sy2Field = new JTextField("-1", 5);
 
         backButton = new JButton("Menu");
         regenerarFigura = new JButton("Graficar");
