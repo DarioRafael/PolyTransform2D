@@ -102,6 +102,8 @@ public class PolilineasRotacionSuc extends JFrame {
         add(planoCartesiano, BorderLayout.CENTER);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
+        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
+
         JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
         // Panel para tabla original

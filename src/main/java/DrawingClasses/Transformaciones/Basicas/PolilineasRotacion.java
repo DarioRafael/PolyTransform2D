@@ -66,7 +66,7 @@ public class PolilineasRotacion extends JFrame {
         rotatedTable = new JTable(rotatedTableModel);
 
         // Labels para mostrar valores de Sx y Sy después de la escalación
-        anguloLabel = new JLabel("Angulo de rotación: 0 °", SwingConstants.CENTER);
+        anguloLabel = new JLabel("θ: 0 °", SwingConstants.CENTER);
         anguloLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
 
     }
@@ -77,8 +77,13 @@ public class PolilineasRotacion extends JFrame {
         JPanel topPanel = new JPanel(new BorderLayout());
         JLabel titleLabel = new JLabel("Transformaciones Geométricas 2D Básica: Rotacion", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+
         topPanel.add(backButton, BorderLayout.WEST);
+
+
         topPanel.add(titleLabel, BorderLayout.CENTER);
+
         add(topPanel, BorderLayout.NORTH);
 
         add(planoCartesiano, BorderLayout.CENTER);
@@ -129,7 +134,7 @@ public class PolilineasRotacion extends JFrame {
         controlPanel.add(regenerarFigura);
         controlPanel.add(new JSeparator());
         controlPanel.add(new JSeparator());
-        controlPanel.add(new JLabel ("Angulo de rotacion:"));
+        controlPanel.add(new JLabel ("R(θ):"));
         controlPanel.add(anguloLabel);
         controlPanel.add(anguloField);
         controlPanel.add(new JLabel(""));
@@ -280,7 +285,7 @@ public class PolilineasRotacion extends JFrame {
 
             updateRotatedTable(puntosRotadosList);
             planoCartesiano.repaint();
-            anguloLabel.setText("Angulo de rotación: " + anguloField.getText() + " °");
+            anguloLabel.setText("θ: " + anguloField.getText() + " °");
 
             // Actualizar la etiqueta de la tabla escalada
             Component parent = rotatedTable.getParent().getParent().getParent();

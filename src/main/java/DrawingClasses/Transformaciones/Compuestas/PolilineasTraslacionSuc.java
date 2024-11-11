@@ -118,6 +118,7 @@ public class PolilineasTraslacionSuc extends JFrame {
 
         // Panel derecho con tablas y controles
         JPanel rightPanel = new JPanel(new BorderLayout());
+        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
         // Panel para las tres tablas
         JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
