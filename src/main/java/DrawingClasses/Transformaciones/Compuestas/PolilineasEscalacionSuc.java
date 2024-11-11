@@ -89,7 +89,7 @@ public class PolilineasEscalacionSuc extends JFrame {
         sx2Label = new JLabel("Sx2: 1", SwingConstants.CENTER);
         sy2Label = new JLabel("Sy2: 1", SwingConstants.CENTER);
 
-        Font boldFont = new Font("Arial", Font.BOLD, 18);
+        Font boldFont = new Font("Arial", Font.BOLD, 12);
         sx1Label.setFont(boldFont);
         sy1Label.setFont(boldFont);
         sx2Label.setFont(boldFont);
@@ -103,7 +103,7 @@ public class PolilineasEscalacionSuc extends JFrame {
         JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
         titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
 
-        JLabel titleLabel2 = new JLabel("Escalaciones Sucesivas", SwingConstants.CENTER);
+        JLabel titleLabel2 = new JLabel("Escalación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
 
         topPanel.add(backButton, BorderLayout.WEST);

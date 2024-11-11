@@ -85,8 +85,8 @@ public class PolilineasRotacionSuc extends JFrame {
 
         primerAnguloLabel = new JLabel("Primera rotación: 0°", SwingConstants.CENTER);
         segundoAnguloLabel = new JLabel("Segunda rotación: 0°", SwingConstants.CENTER);
-        primerAnguloLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        segundoAnguloLabel.setFont(new Font("Arial", Font.BOLD, 18));
+        primerAnguloLabel.setFont(new Font("Arial", Font.BOLD, 12));
+        segundoAnguloLabel.setFont(new Font("Arial", Font.BOLD, 12));
     }
 
     private void configureLayout() {
@@ -96,7 +96,7 @@ public class PolilineasRotacionSuc extends JFrame {
         JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
         titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
 
-        JLabel titleLabel2 = new JLabel("Rotaciones Sucesivas", SwingConstants.CENTER);
+        JLabel titleLabel2 = new JLabel("Rotación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
 
         topPanel.add(backButton, BorderLayout.WEST);
@@ -115,7 +115,7 @@ public class PolilineasRotacionSuc extends JFrame {
         // Panel para tabla original
         JPanel originalTablePanel = new JPanel(new BorderLayout());
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
-        originalLabel.setFont(new Font("Arial", Font.BOLD, 18));
+        originalLabel.setFont(new Font("Arial", Font.BOLD, 12));
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
         originalScrollPane.setPreferredSize(new Dimension(300, 150));
@@ -124,7 +124,7 @@ public class PolilineasRotacionSuc extends JFrame {
         // Panel para primera rotación
         JPanel firstRotationPanel = new JPanel(new BorderLayout());
         rotationTable1Label = new JLabel("Primera Rotación (θ1 = 0°)", SwingConstants.CENTER);
-        rotationTable1Label.setFont(new Font("Arial", Font.BOLD, 18));
+        rotationTable1Label.setFont(new Font("Arial", Font.BOLD, 12));
         firstRotationPanel.add(rotationTable1Label, BorderLayout.NORTH);
         JScrollPane firstRotationScrollPane = new JScrollPane(firstRotationTable);
         firstRotationScrollPane.setPreferredSize(new Dimension(300, 150));
@@ -133,7 +133,7 @@ public class PolilineasRotacionSuc extends JFrame {
         // Panel para segunda rotación
         JPanel secondRotationPanel = new JPanel(new BorderLayout());
         rotationTable2Label = new JLabel("Segunda Rotación (θ2 = 0°)", SwingConstants.CENTER);
-        rotationTable2Label.setFont(new Font("Arial", Font.BOLD, 18));
+        rotationTable2Label.setFont(new Font("Arial", Font.BOLD, 12));
         secondRotationPanel.add(rotationTable2Label, BorderLayout.NORTH);
         JScrollPane secondRotationScrollPane = new JScrollPane(secondRotationTable);
         secondRotationScrollPane.setPreferredSize(new Dimension(300, 150));

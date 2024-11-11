@@ -96,10 +96,10 @@ public class PolilineasTraslacionSuc extends JFrame {
         tx2Label = new JLabel("Tx2: 0", SwingConstants.CENTER);
         ty2Label = new JLabel("Ty2: 0", SwingConstants.CENTER);
 
-        tx1Label.setFont(new Font("Arial", Font.BOLD, 18));
-        ty1Label.setFont(new Font("Arial", Font.BOLD, 18));
-        tx2Label.setFont(new Font("Arial", Font.BOLD, 18));
-        ty2Label.setFont(new Font("Arial", Font.BOLD, 18));
+        tx1Label.setFont(new Font("Arial", Font.BOLD, 12));
+        ty1Label.setFont(new Font("Arial", Font.BOLD, 12));
+        tx2Label.setFont(new Font("Arial", Font.BOLD, 12));
+        ty2Label.setFont(new Font("Arial", Font.BOLD, 12));
     }
 
     private void configureLayout() {
@@ -109,7 +109,7 @@ public class PolilineasTraslacionSuc extends JFrame {
         JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
         titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
 
-        JLabel titleLabel2 = new JLabel("Traslaciones Sucesivas", SwingConstants.CENTER);
+        JLabel titleLabel2 = new JLabel("Traslación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
 
         topPanel.add(backButton, BorderLayout.WEST);
