@@ -36,7 +36,6 @@ public class PolilineasTraslacion extends JFrame {
 
     public PolilineasTraslacion() {
         setTitle("Transformaciones Geométricas 2D Básica: Traslación");
-        setSize(1650, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

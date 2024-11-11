@@ -32,7 +32,6 @@ public class PolilineasRotacion extends JFrame {
 
     public PolilineasRotacion() {
         setTitle("Transformaciones Geométricas 2D Básica: Rotacion");
-        setSize(1650, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         createComponents();

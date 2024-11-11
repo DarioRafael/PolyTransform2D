@@ -35,7 +35,6 @@ public class PolilineasEscalacion extends JFrame {
 
     public PolilineasEscalacion() {
         setTitle("Transformaciones Geométricas 2D Básica: Escalación");
-        setSize(1650, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

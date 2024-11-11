@@ -46,6 +46,7 @@ public class TransformacionesBasicas extends JFrame {
         traslacionButton.addActionListener(e -> {
             dispose();
             PolilineasTraslacion frame = new PolilineasTraslacion();
+            frame.setSize(ajustesVentana.getWindowSize());
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.txField.setText("1");
@@ -55,6 +56,7 @@ public class TransformacionesBasicas extends JFrame {
         escalacionButton.addActionListener(e -> {
             dispose();
             PolilineasEscalacion frame = new PolilineasEscalacion();
+            frame.setSize(ajustesVentana.getWindowSize());
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.sxField.setText("1");
@@ -65,6 +67,7 @@ public class TransformacionesBasicas extends JFrame {
         rotacionButton.addActionListener(e -> {
             dispose();
             PolilineasRotacion frame = new PolilineasRotacion();
+            frame.setSize(ajustesVentana.getWindowSize());
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.anguloField.setText("90");
