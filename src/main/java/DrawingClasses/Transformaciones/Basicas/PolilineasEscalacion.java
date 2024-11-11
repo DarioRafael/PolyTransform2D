@@ -199,7 +199,7 @@ public class PolilineasEscalacion extends JFrame {
             if (parent instanceof JPanel) {
                 JLabel label = (JLabel) ((JPanel) parent).getComponent(0);
                 label.setText("Puntos Escalados: Sx: " + 1 + " Sy: " + 1);
-                label.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+                label.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
             }
             updateOriginalTable(puntosList);
 
