@@ -93,10 +93,16 @@ public class PolilineasRotacionSuc extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel topPanel = new JPanel(new BorderLayout());
-        JLabel titleLabel = new JLabel("Transformaciones Geométricas 2D Compuestas: Rotaciones Sucesivas", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
+        titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
+
+        JLabel titleLabel2 = new JLabel("Rotaciones Sucesivas", SwingConstants.CENTER);
+        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+
         topPanel.add(backButton, BorderLayout.WEST);
-        topPanel.add(titleLabel, BorderLayout.CENTER);
+        topPanel.add(titleLabel1, BorderLayout.NORTH);
+        topPanel.add(titleLabel2, BorderLayout.CENTER);
+
         add(topPanel, BorderLayout.NORTH);
 
         add(planoCartesiano, BorderLayout.CENTER);

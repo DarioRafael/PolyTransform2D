@@ -99,15 +99,18 @@ public class PolilineasEscalacionSuc extends JFrame {
     private void configureLayout() {
         setLayout(new BorderLayout());
 
-        // Top Panel con título y botón de regreso
         JPanel topPanel = new JPanel(new BorderLayout());
-        JLabel titleLabel = new JLabel("Transformaciones Geométricas 2D Compuestas: Escalación Sucesiva", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        topPanel.add(backButton, BorderLayout.WEST);
-        topPanel.add(titleLabel, BorderLayout.CENTER);
-        add(topPanel, BorderLayout.NORTH);
+        JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
+        titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
 
-        // Panel central con el plano cartesiano
+        JLabel titleLabel2 = new JLabel("Escalaciones Sucesivas", SwingConstants.CENTER);
+        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+
+        topPanel.add(backButton, BorderLayout.WEST);
+        topPanel.add(titleLabel1, BorderLayout.NORTH);
+        topPanel.add(titleLabel2, BorderLayout.CENTER);
+
+        add(topPanel, BorderLayout.NORTH);
         add(planoCartesiano, BorderLayout.CENTER);
 
         // Panel derecho con tablas y controles

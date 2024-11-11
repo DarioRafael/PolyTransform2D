@@ -81,12 +81,18 @@ public class PolilineasEscalacion extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel topPanel = new JPanel(new BorderLayout());
-        JLabel titleLabel = new JLabel("Transformaciones Geométricas 2D Básica: Escalación", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        topPanel.add(backButton, BorderLayout.WEST);
-        topPanel.add(titleLabel, BorderLayout.CENTER);
-        add(topPanel, BorderLayout.NORTH);
+        JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Básica:", SwingConstants.CENTER);
+        titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
 
+        JLabel titleLabel2 = new JLabel("Escalación", SwingConstants.CENTER);
+        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+
+        topPanel.add(backButton, BorderLayout.WEST);
+        topPanel.add(titleLabel1, BorderLayout.NORTH);
+        topPanel.add(titleLabel2, BorderLayout.CENTER);
+
+
+        add(topPanel, BorderLayout.NORTH);
         add(planoCartesiano, BorderLayout.CENTER);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
