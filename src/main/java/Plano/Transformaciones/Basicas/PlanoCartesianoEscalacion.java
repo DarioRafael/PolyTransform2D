@@ -28,9 +28,8 @@ public class PlanoCartesianoEscalacion extends JPanel {
     private static final Color COLOR_PUNTO_ORIGINAL = Color.RED;
     private static final Color COLOR_PUNTO_ESCALADO = Color.BLUE;
 
-
-    private static final Color COLOR_LINEA_ORIGINAL = Color.BLACK;
-    private static final Color COLOR_LINEA_ESCALADA = new Color(255, 140, 0);
+    private static final Color COLOR_LINEA_ORIGINAL = Color.RED;
+    private static final Color COLOR_LINEA_ESCALADA = Color.BLUE;
 
 
 

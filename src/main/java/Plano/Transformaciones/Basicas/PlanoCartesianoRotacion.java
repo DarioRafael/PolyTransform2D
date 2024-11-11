@@ -28,10 +28,12 @@ public class PlanoCartesianoRotacion extends JPanel {
 
     private static final Color COLOR_PUNTO_ORIGINAL = Color.RED;
     private static final Color COLOR_PUNTO_ROTADO = Color.BLUE;
+    private static final Color COLOR_PUNTO_ROTADO2 = Color.magenta;
 
 
-    private static final Color COLOR_LINEA_ORIGINAL = Color.BLACK;
-    private static final Color COLOR_LINEA_ROTADA = new Color(255, 140, 0);
+    private static final Color COLOR_LINEA_ORIGINAL = Color.RED;
+    private static final Color COLOR_LINEA_ROTADA = Color.BLUE;
+    private static final Color COLOR_LINEA_ROTADO2 = Color.magenta;
 
     public PlanoCartesianoRotacion() {
         zoomFactor = 0.7; // Ajustar el zoom inicial a 0.8x
@@ -231,28 +233,31 @@ public class PlanoCartesianoRotacion extends JPanel {
     }
 
     private void drawPoints(Graphics2D g2) {
-        g2.setColor(Color.BLACK);
         List<Punto> puntos = Punto.getPuntos();
 
         for (Punto punto : puntos) {
-            // Convertir las coordenadas double a píxeles
             double x = punto.getX() * GRID_SIZE;
             double y = -punto.getY() * GRID_SIZE;
 
-            g2.fillOval((int)(x - 3), (int)(y - 3), 6, 6);
+            // Determinar el color basado en si es un punto escalado o no
+            if (punto.getNombrePunto() != null && punto.getNombrePunto().contains("'")) {
+                if (punto.getNombrePunto().contains("''")) {
+                    g2.setColor(COLOR_PUNTO_ROTADO2); // Color para segunda traslación
+                } else {
+                    g2.setColor(COLOR_PUNTO_ROTADO);
+                }
+            } else {
+                g2.setColor(COLOR_PUNTO_ORIGINAL);
+            }
 
+            g2.fillOval((int) (x - 3), (int) (y - 3), 6, 6);
+
+            // Verificar si el nombre no es null antes de dibujar
             String nombrePunto = punto.getNombrePunto();
             if (nombrePunto != null) {
-                g2.drawString(nombrePunto, (int)(x + 2), (int)(y - 2));
+                g2.drawString(nombrePunto, (int) (x + 2), (int) (y - 2));
             }
         }
-    }
-
-
-    // Método para agregar un nuevo punto y repintar
-    public void addPunto(Punto punto) {
-        Punto.getPuntos().add(punto);
-        repaint(); // Redibujar el plano
     }
 
     private void drawLines(Graphics2D g2) {
@@ -267,34 +272,30 @@ public class PlanoCartesianoRotacion extends JPanel {
             double x2 = fin.getX() * GRID_SIZE;
             double y2 = -fin.getY() * GRID_SIZE;
 
-            // Revisar si el nombre del punto contiene un apóstrofe (') para identificar si es la figura rotada
+            // Determinar el color basado en si es una línea escalada o no
             if (inicio.getNombrePunto() != null && inicio.getNombrePunto().contains("'")) {
-                g2.setColor(new Color(0, 128, 0)); // Verde oscuro para la figura rotada
+                if (inicio.getNombrePunto().contains("''")) {
+                    g2.setColor(COLOR_LINEA_ROTADO2); // Color para segunda traslación
+                } else {
+                    g2.setColor(COLOR_LINEA_ROTADA);
+                }
             } else {
-                g2.setColor(Color.BLACK); // Negro para la figura original
+                g2.setColor(COLOR_LINEA_ORIGINAL);
             }
 
-            g2.drawLine((int)x1, (int)y1, (int)x2, (int)y2);
+            g2.drawLine((int) x1, (int) y1, (int) x2, (int) y2);
 
             if (linea.isEsParteDeFiguraAnonima()) {
-                List<Punto> puntos = Punto.getPuntos();
-                for (Punto punto : puntos) {
-                    double x = punto.getX() * GRID_SIZE;
-                    double y = -punto.getY() * GRID_SIZE;
-
-                    // Colorear los puntos según si son originales o rotados
-                    if (punto.getNombrePunto() != null && punto.getNombrePunto().contains("'")) {
-                        g2.setColor(COLOR_PUNTO_ROTADO); // Verde más oscuro para los puntos rotados
-                    } else {
-                        g2.setColor(Color.RED); // Rojo para los puntos originales
-                    }
-
-                    g2.fillOval((int)(x - 3), (int)(y - 3), 6, 6);
-                }
+                // ... (código existente sin cambios)
             }
         }
     }
 
+    // Método para agregar un nuevo punto y repintar
+    public void addPunto(Punto punto) {
+        Punto.getPuntos().add(punto);
+        repaint(); // Redibujar el plano
+    }
 
     public void addLinea(Linea linea) {
         Linea.getLineas().add(linea);

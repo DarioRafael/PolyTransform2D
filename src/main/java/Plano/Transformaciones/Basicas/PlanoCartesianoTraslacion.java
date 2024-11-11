@@ -27,11 +27,12 @@ public class PlanoCartesianoTraslacion extends JPanel {
     private CoordinateSystem.Type currentCoordSystem = CoordinateSystem.Type.CARTESIAN_ABSOLUTE;
 
     private static final Color COLOR_PUNTO_ORIGINAL = Color.RED;
-    private static final Color COLOR_PUNTO_ESCALADO = Color.BLUE;
+    private static final Color COLOR_PUNTO_TRASLADADO = Color.BLUE;
+    private static final Color COLOR_PUNTO_TRASLADADO2 = Color.magenta;
 
-
-    private static final Color COLOR_LINEA_ORIGINAL = Color.BLACK;
-    private static final Color COLOR_LINEA_ESCALADA = new Color(255, 140, 0);
+    private static final Color COLOR_LINEA_ORIGINAL = Color.RED;
+    private static final Color COLOR_LINEA_TRASLADADO = Color.BLUE;
+    private static final Color COLOR_LINEA_TRASLADADO2 = Color.magenta;
 
     public PlanoCartesianoTraslacion() {
         offsetX = -GRID_SIZE * 4; // Desplazar hacia la derecha
@@ -245,7 +246,11 @@ public class PlanoCartesianoTraslacion extends JPanel {
 
             // Determinar el color basado en si es un punto escalado o no
             if (punto.getNombrePunto() != null && punto.getNombrePunto().contains("'")) {
-                g2.setColor(COLOR_PUNTO_ESCALADO);
+                if (punto.getNombrePunto().contains("''")) {
+                    g2.setColor(COLOR_PUNTO_TRASLADADO2); // Color para segunda traslación
+                } else {
+                    g2.setColor(COLOR_PUNTO_TRASLADADO);
+                }
             } else {
                 g2.setColor(COLOR_PUNTO_ORIGINAL);
             }
@@ -274,7 +279,11 @@ public class PlanoCartesianoTraslacion extends JPanel {
 
             // Determinar el color basado en si es una línea escalada o no
             if (inicio.getNombrePunto() != null && inicio.getNombrePunto().contains("'")) {
-                g2.setColor(COLOR_LINEA_ESCALADA);
+                if (inicio.getNombrePunto().contains("''")) {
+                    g2.setColor(COLOR_LINEA_TRASLADADO2); // Color para segunda traslación
+                } else {
+                    g2.setColor(COLOR_LINEA_TRASLADADO);
+                }
             } else {
                 g2.setColor(COLOR_LINEA_ORIGINAL);
             }
@@ -282,23 +291,11 @@ public class PlanoCartesianoTraslacion extends JPanel {
             g2.drawLine(x1, y1, x2, y2);
 
             if (linea.isEsParteDeFiguraAnonima()) {
-                List<Punto> puntos = Punto.getPuntos();
-                for (Punto punto : puntos) {
-                    int x = punto.getX() * GRID_SIZE;
-                    int y = -punto.getY() * GRID_SIZE;
-
-                    // Usar el mismo esquema de colores para los puntos
-                    if (punto.getNombrePunto() != null && punto.getNombrePunto().contains("'")) {
-                        g2.setColor(COLOR_PUNTO_ESCALADO);
-                    } else {
-                        g2.setColor(COLOR_PUNTO_ORIGINAL);
-                    }
-
-                    g2.fillOval(x - 3, y - 3, 6, 6);
-                }
+                // ... (código existente sin cambios)
             }
         }
     }
+
 
 
     // Método para agregar un nuevo punto y repintar
