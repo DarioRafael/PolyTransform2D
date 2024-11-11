@@ -37,6 +37,9 @@ public class PlanoCartesianoEscalacion extends JPanel {
 
 
     public PlanoCartesianoEscalacion() {
+        offsetX = -GRID_SIZE * 4; // Desplazar hacia la derecha
+        offsetY = GRID_SIZE * 4; // Desplazar hacia arriba
+        zoomFactor = 0.7; // Ajustar el zoom inicial a 0.8x
         setupMouseListeners();
     }
 
