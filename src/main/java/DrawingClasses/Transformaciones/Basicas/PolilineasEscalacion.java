@@ -71,10 +71,10 @@ public class PolilineasEscalacion extends JFrame {
 
         // Labels para mostrar valores de Sx y Sy después de la escalación
         sxLabel = new JLabel("Sx: 1", SwingConstants.CENTER);
-        sxLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+        sxLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
 
         syLabel = new JLabel("Sy: 1", SwingConstants.CENTER);
-        syLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+        syLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
     }
 
     private void configureLayout() {

@@ -67,7 +67,7 @@ public class PolilineasRotacion extends JFrame {
 
         // Labels para mostrar valores de Sx y Sy después de la escalación
         anguloLabel = new JLabel("Angulo de rotación: 0 °", SwingConstants.CENTER);
-        anguloLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+        anguloLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
 
     }
 
@@ -92,7 +92,7 @@ public class PolilineasRotacion extends JFrame {
         JPanel originalTablePanel = new JPanel(new BorderLayout());
 
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
-        originalLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        originalLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
 
@@ -102,7 +102,7 @@ public class PolilineasRotacion extends JFrame {
         JPanel rotatedTablePanel = new JPanel(new BorderLayout());
 
         JLabel scaledLabel = new JLabel("Puntos Rotados: " + "Ángulo de rotación: " + anguloText + "°" , SwingConstants.CENTER);
-        scaledLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        scaledLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         rotatedTablePanel.add(scaledLabel, BorderLayout.NORTH);
 
         JScrollPane rotatedScrollPane = new JScrollPane(rotatedTable);

@@ -73,10 +73,10 @@ public class PolilineasTraslacion extends JFrame {
 
         // Labels para mostrar valores de Sx y Sy después de la escalación
         txLabel = new JLabel("Tx: 0", SwingConstants.CENTER);
-        txLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+        txLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
 
         tyLabel = new JLabel("Ty: 0", SwingConstants.CENTER);
-        tyLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
+        tyLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Cambia "Arial" y 18 por la fuente y tamaño deseados
 
     }
 
@@ -103,7 +103,7 @@ public class PolilineasTraslacion extends JFrame {
         JPanel originalTablePanel = new JPanel(new BorderLayout());
 
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
-        originalLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        originalLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
 
@@ -115,7 +115,7 @@ public class PolilineasTraslacion extends JFrame {
         JPanel translatedTablePanel = new JPanel(new BorderLayout());
 
         JLabel scaledLabel = new JLabel("Puntos Trasladados: " + "Tx: " + tx + " Ty: " + ty, SwingConstants.CENTER);
-        scaledLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        scaledLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         translatedTablePanel.add(scaledLabel, BorderLayout.NORTH);
 
 
