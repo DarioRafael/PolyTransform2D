@@ -1,4 +1,4 @@
-package PaginaPrincipalFolder;
+package PaginaPrincipalFolder.Settings;
 
 import java.awt.Dimension;
 

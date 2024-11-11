@@ -1,6 +1,6 @@
 package PaginaPrincipalFolder.Transformaciones;
 
-import PaginaPrincipalFolder.AjustesVentana;
+import PaginaPrincipalFolder.Settings.AjustesVentana;
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesBasicas;
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesCompuestas;
 

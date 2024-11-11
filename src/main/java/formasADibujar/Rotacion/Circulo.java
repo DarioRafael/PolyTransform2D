@@ -1,9 +1,5 @@
 package formasADibujar.Rotacion;
 
-import Plano.GenericsPlano.PlanoCartesiano;
-import Plano.GraficadoraBasica.PlanoCartesianoConicasV;
-import formasADibujar.Rotacion.Punto;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,20 +48,7 @@ public class Circulo {
     }
 
     // Método para dibujar el círculo en el plano cartesiano
-    public void dibujar(PlanoCartesianoConicasV plano) {
-        plano.addCirculo(this); // Método para agregar al plano
 
-        // Calcular y agregar los puntos del círculo
-        for (int i = 0; i < 360; i++) {
-            double radianes = Math.toRadians(i);
-            int x = (int) Math.round(centro.getX() + radio * Math.cos(radianes));
-            int y = (int) Math.round(centro.getY() + radio * Math.sin(radianes));
-            plano.addPunto(new Punto(x, y)); // Asegúrate de que tu método addPunto esté definido
-            System.out.println("Punto " + i + ": (" + x + ", " + y + ")");
-        }
-
-        plano.repaint(); // Repaint para actualizar el plano
-    }
 
     // Método para calcular los puntos del círculo
     public List<Punto> calcularPuntos() {

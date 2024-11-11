@@ -1,6 +1,5 @@
 package DrawingClasses.Transformaciones;
 
-import PaginaPrincipalFolder.GraficadoraBasica.PaginaPrincipal;
 import Plano.Transformaciones.Basicas.PlanoCartesianoTraslacion;
 import formasADibujar.Linea;
 import formasADibujar.Punto;
@@ -114,7 +113,7 @@ public class PolilineasRotacionPosibleT extends JFrame {
 
     private void addActionListeners() {
         backButton.addActionListener(e -> {
-            new PaginaPrincipal().setVisible(true);
+            //new PaginaPrincipal().setVisible(true);
             dispose();
         });
 
