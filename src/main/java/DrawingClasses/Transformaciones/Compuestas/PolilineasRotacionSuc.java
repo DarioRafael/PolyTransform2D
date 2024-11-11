@@ -46,6 +46,7 @@ public class PolilineasRotacionSuc extends JFrame {
         setSize(1850, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setMinimumSize(new Dimension(800, 600)); // Establecer tamaño mínimo
         createComponents();
         configureLayout();
         addActionListeners();
@@ -83,6 +84,14 @@ public class PolilineasRotacionSuc extends JFrame {
         firstRotationTable = new JTable(firstRotationTableModel);
         secondRotationTable = new JTable(secondRotationTableModel);
 
+        originalTable.setRowHeight(20);
+        firstRotationTable.setRowHeight(20);
+        secondRotationTable.setRowHeight(20);
+
+        originalTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        firstRotationTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        secondRotationTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+
         primerAnguloLabel = new JLabel("θ1: 0°", SwingConstants.CENTER);
         segundoAnguloLabel = new JLabel("θ2: 0°", SwingConstants.CENTER);
         primerAnguloLabel.setFont(new Font("Arial", Font.BOLD, 12));
@@ -108,35 +117,32 @@ public class PolilineasRotacionSuc extends JFrame {
         add(planoCartesiano, BorderLayout.CENTER);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
+        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Adjust preferred size
 
         JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
-        // Panel para tabla original
+        // Panel for original table
         JPanel originalTablePanel = new JPanel(new BorderLayout());
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
         originalLabel.setFont(new Font("Arial", Font.BOLD, 12));
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
-        originalScrollPane.setPreferredSize(new Dimension(300, 150));
         originalTablePanel.add(originalScrollPane, BorderLayout.CENTER);
 
-        // Panel para primera rotación
+        // Panel for first rotation table
         JPanel firstRotationPanel = new JPanel(new BorderLayout());
         rotationTable1Label = new JLabel("Primera Rotación (θ1 = 0°)", SwingConstants.CENTER);
         rotationTable1Label.setFont(new Font("Arial", Font.BOLD, 12));
         firstRotationPanel.add(rotationTable1Label, BorderLayout.NORTH);
         JScrollPane firstRotationScrollPane = new JScrollPane(firstRotationTable);
-        firstRotationScrollPane.setPreferredSize(new Dimension(300, 150));
         firstRotationPanel.add(firstRotationScrollPane, BorderLayout.CENTER);
 
-        // Panel para segunda rotación
+        // Panel for second rotation table
         JPanel secondRotationPanel = new JPanel(new BorderLayout());
         rotationTable2Label = new JLabel("Segunda Rotación (θ2 = 0°)", SwingConstants.CENTER);
         rotationTable2Label.setFont(new Font("Arial", Font.BOLD, 12));
         secondRotationPanel.add(rotationTable2Label, BorderLayout.NORTH);
         JScrollPane secondRotationScrollPane = new JScrollPane(secondRotationTable);
-        secondRotationScrollPane.setPreferredSize(new Dimension(300, 150));
         secondRotationPanel.add(secondRotationScrollPane, BorderLayout.CENTER);
 
         tablesPanel.add(originalTablePanel);
@@ -172,7 +178,6 @@ public class PolilineasRotacionSuc extends JFrame {
         rightPanel.add(controlPanel, BorderLayout.NORTH);
         add(rightPanel, BorderLayout.EAST);
     }
-
     private void addActionListeners() {
         backButton.addActionListener(e -> {
             new TransformacionesCompuestas().setVisible(true);
