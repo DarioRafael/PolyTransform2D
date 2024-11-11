@@ -125,6 +125,10 @@ public class PolilineasTraslacionSuc extends JFrame {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
+        JScrollPane rightScrollPane = new JScrollPane(rightPanel);
+        rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
+
+
         // Panel para las tres tablas
         JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
@@ -195,7 +199,9 @@ public class PolilineasTraslacionSuc extends JFrame {
         controlPanel.add(ty2Label);
 
         rightPanel.add(controlPanel, BorderLayout.NORTH);
-        add(rightPanel, BorderLayout.EAST);
+
+
+        add(rightScrollPane, BorderLayout.EAST);
     }
     private void addActionListeners() {
         backButton.addActionListener(e -> {
