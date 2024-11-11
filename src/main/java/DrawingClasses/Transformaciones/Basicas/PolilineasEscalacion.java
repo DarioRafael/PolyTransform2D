@@ -97,7 +97,7 @@ public class PolilineasEscalacion extends JFrame {
         JPanel originalTablePanel = new JPanel(new BorderLayout());
 
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
-        originalLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        originalLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
 
@@ -107,7 +107,7 @@ public class PolilineasEscalacion extends JFrame {
         JPanel scaledTablePanel = new JPanel(new BorderLayout());
 
         JLabel scaledLabel = new JLabel("Puntos Escalados: " + "Sx: " + sx + " Sy: " + sy, SwingConstants.CENTER);
-        scaledLabel.setFont(new Font("Arial", Font.BOLD, 18)); // Set font to Arial, bold, size 18
+        scaledLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         scaledTablePanel.add(scaledLabel, BorderLayout.NORTH);
         JScrollPane scaledScrollPane = new JScrollPane(scaledTable);
 
