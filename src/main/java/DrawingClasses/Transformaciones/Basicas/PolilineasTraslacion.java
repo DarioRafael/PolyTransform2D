@@ -85,10 +85,10 @@ public class PolilineasTraslacion extends JFrame {
 
         JPanel topPanel = new JPanel(new BorderLayout());
         JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Básica:", SwingConstants.CENTER);
-        titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel1.setFont(new Font("Arial", Font.BOLD, 20));
 
         JLabel titleLabel2 = new JLabel("Traslación", SwingConstants.CENTER);
-        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
         topPanel.add(backButton, BorderLayout.WEST);
         topPanel.add(titleLabel1, BorderLayout.NORTH);

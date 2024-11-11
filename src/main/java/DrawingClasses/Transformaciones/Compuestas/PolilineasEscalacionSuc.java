@@ -101,10 +101,10 @@ public class PolilineasEscalacionSuc extends JFrame {
 
         JPanel topPanel = new JPanel(new BorderLayout());
         JLabel titleLabel1 = new JLabel("Transformaciones Geométricas 2D Compuestas:", SwingConstants.CENTER);
-        titleLabel1.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel1.setFont(new Font("Arial", Font.BOLD, 20));
 
         JLabel titleLabel2 = new JLabel("Escalación Sucesiva", SwingConstants.CENTER);
-        titleLabel2.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
         topPanel.add(backButton, BorderLayout.WEST);
         topPanel.add(titleLabel1, BorderLayout.NORTH);
