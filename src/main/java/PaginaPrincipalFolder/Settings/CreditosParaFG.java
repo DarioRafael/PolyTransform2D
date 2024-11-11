@@ -1,6 +1,6 @@
 package PaginaPrincipalFolder.Settings;
 
-import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.MenuTransformaciones;
 
 import javax.swing.*;
 import java.awt.*;

@@ -5,7 +5,7 @@ import DrawingClasses.Transformaciones.Basicas.PolilineasRotacion;
 import DrawingClasses.Transformaciones.Basicas.PolilineasTraslacion;
 import PaginaPrincipalFolder.Settings.AjustesVariables;
 import PaginaPrincipalFolder.Settings.AjustesVentana;
-import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.MenuTransformaciones;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +21,7 @@ public class TransformacionesBasicas extends JFrame {
 
     public TransformacionesBasicas() {
         setTitle("Transformaciones Básicas en 2D");
-        setSize(800, 600);
+        setSize(ajustesVentana.getWindowSize());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -47,7 +47,7 @@ public class TransformacionesBasicas extends JFrame {
             dispose();
             PolilineasTraslacion frame = new PolilineasTraslacion();
             frame.setSize(ajustesVentana.getWindowSize());
-            frame.setLocationRelativeTo(frame);
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.txField.setText("1");
@@ -58,7 +58,7 @@ public class TransformacionesBasicas extends JFrame {
             dispose();
             PolilineasEscalacion frame = new PolilineasEscalacion();
             frame.setSize(ajustesVentana.getWindowSize());
-            frame.setLocationRelativeTo(frame);
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.sxField.setText("1");
@@ -70,7 +70,7 @@ public class TransformacionesBasicas extends JFrame {
             dispose();
             PolilineasRotacion frame = new PolilineasRotacion();
             frame.setSize(ajustesVentana.getWindowSize());
-            frame.setLocationRelativeTo(frame);
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
             frame.anguloField.setText("90");

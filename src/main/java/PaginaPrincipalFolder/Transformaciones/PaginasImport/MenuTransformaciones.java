@@ -1,4 +1,4 @@
-package PaginaPrincipalFolder.Transformaciones;
+package PaginaPrincipalFolder.Transformaciones.PaginasImport;
 
 import PaginaPrincipalFolder.Settings.AjustesVentana;
 import PaginaPrincipalFolder.Settings.CreditosParaFG;

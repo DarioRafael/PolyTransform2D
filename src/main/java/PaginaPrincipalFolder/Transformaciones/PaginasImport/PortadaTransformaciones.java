@@ -1,7 +1,6 @@
-package PaginaPrincipalFolder.Transformaciones.Portada;
+package PaginaPrincipalFolder.Transformaciones.PaginasImport;
 
 import PaginaPrincipalFolder.Settings.AjustesVentana;
-import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -131,7 +130,7 @@ public class PortadaTransformaciones extends JFrame {
             ImageIcon figuraIcon = new ImageIcon(getClass().getResource("/images/figuraPolilineas.png"));
             Image figuraImg = figuraIcon.getImage();
             // Tamaño fijo pequeño para la imagen
-            int newWidth = 200; // Ancho fijo de 200px
+            int newWidth = 400; // Ancho fijo de 200px
             int newHeight = (newWidth * figuraIcon.getIconHeight()) / figuraIcon.getIconWidth();
 
             Image scaledImage = figuraImg.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);

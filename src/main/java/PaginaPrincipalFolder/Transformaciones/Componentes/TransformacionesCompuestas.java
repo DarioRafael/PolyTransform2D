@@ -4,7 +4,8 @@ import DrawingClasses.Transformaciones.Compuestas.PolilineasEscalacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasRotacionSuc;
 import DrawingClasses.Transformaciones.Compuestas.PolilineasTraslacionSuc;
 import PaginaPrincipalFolder.Settings.AjustesVariables;
-import PaginaPrincipalFolder.Transformaciones.MenuTransformaciones;
+import PaginaPrincipalFolder.Settings.AjustesVentana;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.MenuTransformaciones;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +19,7 @@ public class TransformacionesCompuestas extends JFrame {
     private static final Color SEPARATOR_COLOR = new Color(200, 200, 220);
 
     public AjustesVariables ajustesVariables = new AjustesVariables();
-
+    public AjustesVentana ajustesVentana = new AjustesVentana();
 
     public TransformacionesCompuestas() {
         setTitle("Transformaciones Compuestas en 2D");
@@ -63,6 +64,8 @@ public class TransformacionesCompuestas extends JFrame {
         traslacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasTraslacionSuc frame = new PolilineasTraslacionSuc();
+            frame.setSize(ajustesVentana.getWindowSize());
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
         });
@@ -70,6 +73,8 @@ public class TransformacionesCompuestas extends JFrame {
         escalacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasEscalacionSuc frame = new PolilineasEscalacionSuc();
+            frame.setSize(ajustesVentana.getWindowSize());
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
         });
@@ -77,6 +82,8 @@ public class TransformacionesCompuestas extends JFrame {
         rotacionesBtn.addActionListener(e -> {
             dispose();
             PolilineasRotacionSuc frame = new PolilineasRotacionSuc();
+            frame.setSize(ajustesVentana.getWindowSize());
+            frame.setLocationRelativeTo(null);
             frame.drawFiguraOriginal(ajustesVariables.getX(), ajustesVariables.getY(), 1);
             frame.aumentoComboBox.setSelectedIndex(0);
         });
