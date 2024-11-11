@@ -98,6 +98,10 @@ public class PolilineasEscalacion extends JFrame {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
+        JScrollPane rightScrollPane = new JScrollPane(rightPanel);
+        rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
+
+
         JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
 
         JPanel originalTablePanel = new JPanel(new BorderLayout());
@@ -148,7 +152,7 @@ public class PolilineasEscalacion extends JFrame {
         controlPanel.add(syLabel);  // Mostrar valor de Sy
 
         rightPanel.add(controlPanel, BorderLayout.NORTH);
-        add(rightPanel, BorderLayout.EAST);
+        add(rightScrollPane, BorderLayout.EAST);
     }
 
     private void addActionListeners() {

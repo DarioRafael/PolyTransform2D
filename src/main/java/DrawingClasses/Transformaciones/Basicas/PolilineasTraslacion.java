@@ -101,6 +101,10 @@ public class PolilineasTraslacion extends JFrame {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
+        JScrollPane rightScrollPane = new JScrollPane(rightPanel);
+        rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
+
+
         // Panel para las tablas
         JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
 
@@ -158,7 +162,7 @@ public class PolilineasTraslacion extends JFrame {
         controlPanel.add(tyLabel);  // Mostrar valor de Sy
 
         rightPanel.add(controlPanel, BorderLayout.NORTH);
-        add(rightPanel, BorderLayout.EAST);
+        add(rightScrollPane, BorderLayout.EAST);
     }
 
     private void addActionListeners() {

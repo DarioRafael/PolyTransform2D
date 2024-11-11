@@ -92,6 +92,8 @@ public class PolilineasRotacion extends JFrame {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
 
+        JScrollPane rightScrollPane = new JScrollPane(rightPanel);
+        rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
 
         JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
 
@@ -143,7 +145,7 @@ public class PolilineasRotacion extends JFrame {
         controlPanel.add(anguloLabel);
 
         rightPanel.add(controlPanel, BorderLayout.NORTH);
-        add(rightPanel, BorderLayout.EAST);
+        add(rightScrollPane, BorderLayout.EAST);
     }
 
     private void addActionListeners() {
