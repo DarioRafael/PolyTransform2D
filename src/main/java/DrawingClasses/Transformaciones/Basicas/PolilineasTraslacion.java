@@ -308,7 +308,7 @@ public class PolilineasTraslacion extends JFrame {
             // Actualizar la etiqueta de la tabla escalada
             Component parent = translatedTable.getParent().getParent().getParent();
             if (parent instanceof JPanel) {
-                ((JLabel) ((JPanel) parent).getComponent(0)).setText("Puntos Escalados: Tx: " + tx + " Ty: " + ty);
+                ((JLabel) ((JPanel) parent).getComponent(0)).setText("Puntos Trasladados: Tx: " + tx + " Ty: " + ty);
             }
 
 
