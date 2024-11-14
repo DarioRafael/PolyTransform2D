@@ -69,7 +69,7 @@ public class CreditosParaFG extends JFrame {
         addLabelAndText(creditPanel, "REQUERIMIENTOS DEL SOFTWARE:", headerFont, 0, 9);
         addTextArea(creditPanel, "- Sistema Operativo: Windows XP, Vista, Windows 7, Windows 8, Windows 10, Windows 11\n- Lenguaje de Programación: Java (NetBeans)", textFont, 0, 10);
         addLabelAndText(creditPanel, "EJECUCIÓN DE LAS TRANSFORMACIONES GEOMÉTRICAS EN 2D:", headerFont, 0, 11);
-        addTextArea(creditPanel, "- Insertar la USB con el archivo.\n- Ejecutar el Programa: TransGeo.exe", textFont, 0, 12);
+        addTextArea(creditPanel, "- Insertar la USB con el archivo.\n- Ejecutar el Programa: TransGeo_2D.exe", textFont, 0, 12);
 
         return creditPanel;
     }
