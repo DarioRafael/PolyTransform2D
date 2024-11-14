@@ -68,6 +68,7 @@ public class PolilineasTraslacion extends JFrame {
         String[] columnNamesEdi = {"P'", "X'", "Y'"};
         originalTableModel = new DefaultTableModel(columnNames, 0);
         translatedTableModel = new DefaultTableModel(columnNamesEdi, 0);
+
         originalTable = new JTable(originalTableModel);
         translatedTable = new JTable(translatedTableModel);
 
@@ -99,34 +100,40 @@ public class PolilineasTraslacion extends JFrame {
 
         // Panel derecho con las dos tablas
         JPanel rightPanel = new JPanel(new BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
+        rightPanel.setPreferredSize(new Dimension(250, getHeight()));
+
+        JScrollPane rightScrollPane = new JScrollPane(rightPanel);
+        rightScrollPane.setPreferredSize(new Dimension(250, getHeight()));
+        rightScrollPane.setBorder(BorderFactory.createEmptyBorder());  // Eliminar borde del scroll
 
         // Panel para las tablas
-        JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
+        JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 0, 0));  // Reducir spacing entre componentes
+        tablesPanel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));  // Eliminar padding
 
         // Primera tabla (Original)
         JPanel originalTablePanel = new JPanel(new BorderLayout());
+        originalTablePanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 5, 5));  // Ajustar padding
 
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
-        originalLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
+        originalLabel.setFont(new Font("Arial", Font.BOLD, 12));
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
+
         JScrollPane originalScrollPane = new JScrollPane(originalTable);
-
-
-        originalScrollPane.setPreferredSize(new Dimension(300, 200));
+        originalScrollPane.setBorder(BorderFactory.createLineBorder(Color.GRAY));  // Borde sutil
+        originalScrollPane.setPreferredSize(new Dimension(300, 150));  // Reducir altura
         originalTablePanel.add(originalScrollPane, BorderLayout.CENTER);
 
         // Segunda tabla (Trasladada)
         JPanel translatedTablePanel = new JPanel(new BorderLayout());
+        translatedTablePanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 5, 5));  // Ajustar padding
 
         JLabel scaledLabel = new JLabel("Puntos Trasladados: " + "Tx: " + tx + " Ty: " + ty, SwingConstants.CENTER);
-        scaledLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
+        scaledLabel.setFont(new Font("Arial", Font.BOLD, 12));
         translatedTablePanel.add(scaledLabel, BorderLayout.NORTH);
 
-
-
         JScrollPane translatedScrollPane = new JScrollPane(translatedTable);
-        translatedScrollPane.setPreferredSize(new Dimension(300, 200));
+        translatedScrollPane.setBorder(BorderFactory.createLineBorder(Color.GRAY));  // Borde sutil
+        translatedScrollPane.setPreferredSize(new Dimension(300, 150));  // Reducir altura
         translatedTablePanel.add(translatedScrollPane, BorderLayout.CENTER);
 
         tablesPanel.add(originalTablePanel);
@@ -136,29 +143,34 @@ public class PolilineasTraslacion extends JFrame {
 
         // Panel de controles
         JPanel controlPanel = new JPanel(new GridLayout(10, 2, 5, 5));
-        controlPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        controlPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));  // Reducir padding
 
         controlPanel.add(new JLabel("X inicial:"));
         controlPanel.add(xInicialField);
         controlPanel.add(new JLabel("Y inicial:"));
         controlPanel.add(yInicialField);
         controlPanel.add(new JLabel("Aumento:"));
-        controlPanel.add(aumentoComboBox); // Añadimos el ComboBox del aumento
+        controlPanel.add(aumentoComboBox);
         controlPanel.add(new JLabel(""));
         controlPanel.add(regenerarFigura);
+
+
         controlPanel.add(new JSeparator());
         controlPanel.add(new JSeparator());
+
+
         controlPanel.add(new JLabel("Tx:"));
         controlPanel.add(txField);
         controlPanel.add(new JLabel("Ty:"));
         controlPanel.add(tyField);
         controlPanel.add(new JLabel(""));
         controlPanel.add(trasladarButton);
-        controlPanel.add(txLabel);  // Mostrar valor de Sx
-        controlPanel.add(tyLabel);  // Mostrar valor de Sy
+        controlPanel.add(txLabel);
+        controlPanel.add(tyLabel);
 
         rightPanel.add(controlPanel, BorderLayout.NORTH);
-        add(rightPanel, BorderLayout.EAST);
+
+        add(rightScrollPane, BorderLayout.EAST);
     }
 
     private void addActionListeners() {
