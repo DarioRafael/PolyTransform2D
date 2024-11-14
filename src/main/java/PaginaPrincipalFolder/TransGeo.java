@@ -11,8 +11,7 @@ public class TransGeo {
 
     public void ejecutarPrograma(){
         portadaTransformaciones.setVisible(true);
-    }
-
+    }//Fin del metodo ejecutarPrograma
     public static void main(String[] args) {
         new TransGeo();
     }
