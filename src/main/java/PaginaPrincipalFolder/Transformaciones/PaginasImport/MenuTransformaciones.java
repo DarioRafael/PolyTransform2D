@@ -49,7 +49,7 @@ public class MenuTransformaciones {
         // Creación de botones personalizados
         JButton basicasButton = createStyledButton("Transformaciones Geométricas 2D Básicas", "Traslación, Escalación y Rotación");
         JButton compuestasButton = createStyledButton("Transformaciones Geométricas 2D Compuestas", "Transformaciones sucesivas");
-        JButton creditosButton = createStyledButton("Creditos", "Dario Rafael & Juan Carlos");
+        JButton creditosButton = createStyledButton("Créditos", "Dario Rafael & Juan Carlos");
 
         basicasButton.addActionListener(e -> {
             frame.dispose();

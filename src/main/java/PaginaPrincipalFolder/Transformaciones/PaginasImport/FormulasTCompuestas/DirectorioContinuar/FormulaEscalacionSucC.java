@@ -1,6 +1,7 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaEscalacionSuc;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -99,6 +100,20 @@ public class FormulaEscalacionSucC extends JFrame {
         aceptarButton.setFocusPainted(false);
         aceptarButton.addActionListener(e -> dispose());
 
+        // Botón Regresar
+        JButton regresarButton = new JButton("Regresar");
+        regresarButton.setFont(new Font("Arial", Font.BOLD, 14));
+        regresarButton.setPreferredSize(new Dimension(120, 35));
+        regresarButton.setMaximumSize(new Dimension(120, 35));
+        regresarButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        regresarButton.setBackground(new Color(70, 130, 180));
+        regresarButton.setForeground(Color.BLUE);
+        regresarButton.setFocusPainted(false);
+        regresarButton.addActionListener(e -> {
+            new FormulaEscalacionSuc().setVisible(true);;
+            dispose();
+        });
+
 
         // Agregar componentes al panel
         centeredPanel.add(titleLabel);
@@ -129,6 +144,7 @@ public class FormulaEscalacionSucC extends JFrame {
         }
 
         centeredPanel.add(Box.createRigidArea(new Dimension(0, 20)));
+        centeredPanel.add(regresarButton);
         centeredPanel.add(aceptarButton);
 
 

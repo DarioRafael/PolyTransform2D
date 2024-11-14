@@ -1,6 +1,7 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar.FormulaRotacionSucC;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -62,13 +63,13 @@ public class FormulaRotacionSuc extends JFrame {
         JLabel pxyParticularLabel = createContentLabel("P1(X1, Y1):");
 
         JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
-                + "[X₁' Y₁' 1] = [X₁ Y₁ 1] · "
+                + "[X'₁ Y'₁ 1] = [X₁ Y₁ 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;Cos&nbsp;θ₁&nbsp;</td><td>&nbsp;Sen&nbsp;θ₁&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;-Sen&nbsp;θ₁&nbsp;</td><td>&nbsp;Cos&nbsp;θ₁&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X₁' Y₁' 1] = [(X₁ * Cos θ₁ - Y₁ * Sen θ₁), (X₁ * Sen θ₁ + Y₁ * Cos θ₁), 1]</div></div></html>");
+                + "<div style='margin-top: 10px;'>[X'₁ Y'₁ 1] = [(X₁ * Cos θ₁ - Y₁ * Sen θ₁), (X₁ * Sen θ₁ + Y₁ * Cos θ₁), 1]</div></div></html>");
         matrizParticular.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Sección de operaciones
@@ -107,7 +108,10 @@ public class FormulaRotacionSuc extends JFrame {
         continuarButton.setBackground(new Color(70, 130, 180));
         continuarButton.setForeground(Color.BLUE);
         continuarButton.setFocusPainted(false);
-        continuarButton.addActionListener(e -> dispose());
+        continuarButton.addActionListener(e -> {
+            new FormulaRotacionSucC().setVisible(true);
+            dispose();
+        });
 
         // Agregar componentes al panel
         centeredPanel.add(titleLabel);

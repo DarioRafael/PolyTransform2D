@@ -1,6 +1,8 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTBasicas.FormulaTraslacion;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaRotacionSuc;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -99,6 +101,19 @@ public class FormulaTraslacionSucC extends JFrame {
         aceptarButton.setFocusPainted(false);
         aceptarButton.addActionListener(e -> dispose());
 
+        // Botón Regresar
+        JButton regresarButton = new JButton("Regresar");
+        regresarButton.setFont(new Font("Arial", Font.BOLD, 14));
+        regresarButton.setPreferredSize(new Dimension(120, 35));
+        regresarButton.setMaximumSize(new Dimension(120, 35));
+        regresarButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        regresarButton.setBackground(new Color(70, 130, 180));
+        regresarButton.setForeground(Color.BLUE);
+        regresarButton.setFocusPainted(false);
+        regresarButton.addActionListener(e -> {
+            new FormulaTraslacion().setVisible(true);
+            dispose();
+        });
 
 
         // Agregar componentes al panel

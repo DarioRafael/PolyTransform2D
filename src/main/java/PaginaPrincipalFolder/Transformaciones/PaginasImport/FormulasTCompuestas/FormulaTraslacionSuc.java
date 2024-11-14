@@ -1,6 +1,8 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar.FormulaRotacionSucC;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar.FormulaTraslacionSucC;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -108,7 +110,10 @@ public class FormulaTraslacionSuc extends JFrame {
         continuarButton.setBackground(new Color(70, 130, 180));
         continuarButton.setForeground(Color.BLUE);
         continuarButton.setFocusPainted(false);
-        continuarButton.addActionListener(e -> dispose());
+        continuarButton.addActionListener(e -> {
+            new FormulaTraslacionSucC().setVisible(true);
+            dispose();
+        });
 
         // Agregar componentes al panel
         centeredPanel.add(titleLabel);
