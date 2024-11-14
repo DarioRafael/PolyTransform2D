@@ -1,6 +1,8 @@
 package DrawingClasses.Transformaciones.Compuestas;
 
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesCompuestas;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaRotacionSuc;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaTraslacionSuc;
 import Plano.Transformaciones.Basicas.PlanoCartesianoRotacion;
 import formasADibujar.Rotacion.Linea;
 import formasADibujar.Rotacion.Punto;
@@ -20,7 +22,7 @@ public class PolilineasRotacionSuc extends JFrame {
     private DefaultTableModel originalTableModel;
     private DefaultTableModel firstRotationTableModel;
     private DefaultTableModel secondRotationTableModel;
-    private JButton backButton;
+    private JButton backButton, formulaButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
     private JTextField primerAnguloField;
@@ -63,6 +65,8 @@ public class PolilineasRotacionSuc extends JFrame {
         segundoAnguloField = new JTextField("90", 5);
 
         backButton = new JButton("Menu");
+        formulaButton = new JButton("Formula");
+
         regenerarFigura = new JButton("Graficar");
         primerRotacionButton = new JButton("Rotar");
         segundaRotacionButton = new JButton("Rotar");
@@ -108,7 +112,11 @@ public class PolilineasRotacionSuc extends JFrame {
         JLabel titleLabel2 = new JLabel("Rotación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
-        topPanel.add(backButton, BorderLayout.WEST);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        buttonPanel.add(backButton);
+        buttonPanel.add(formulaButton);
+
+        topPanel.add(buttonPanel, BorderLayout.SOUTH);
         topPanel.add(titleLabel1, BorderLayout.NORTH);
         topPanel.add(titleLabel2, BorderLayout.CENTER);
 
@@ -171,11 +179,11 @@ public class PolilineasRotacionSuc extends JFrame {
         controlPanel.add(regenerarFigura);
         controlPanel.add(new JSeparator());
         controlPanel.add(new JSeparator());
-        controlPanel.add(new JLabel("θ1:"));
+        controlPanel.add(new JLabel("R1(θ1):"));
         controlPanel.add(primerAnguloField);
         controlPanel.add(new JLabel(""));
         controlPanel.add(primerRotacionButton);
-        controlPanel.add(new JLabel("θ2:"));
+        controlPanel.add(new JLabel("R2(θ2):"));
         controlPanel.add(segundoAnguloField);
         controlPanel.add(new JLabel(""));
         controlPanel.add(segundaRotacionButton);
@@ -191,6 +199,9 @@ public class PolilineasRotacionSuc extends JFrame {
             new TransformacionesCompuestas().setVisible(true);
             clearPlanoAndData();
             dispose();
+        });
+        formulaButton.addActionListener(e -> {
+            new FormulaRotacionSuc().setVisible(true);
         });
 
         primerRotacionButton.addActionListener(e -> realizarPrimeraRotacion());

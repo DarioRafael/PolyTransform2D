@@ -37,6 +37,7 @@ public class PolilineasEscalacion extends JFrame {
 
     public PolilineasEscalacion() {
         setTitle("Transformaciones Geométricas 2D Básica: Escalación");
+        setSize(1800, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -69,6 +70,7 @@ public class PolilineasEscalacion extends JFrame {
         String[] columnNamesEdi = {"P'", "X'", "Y'"};
         originalTableModel = new DefaultTableModel(columnNames, 0);
         scaledTableModel = new DefaultTableModel(columnNamesEdi, 0);
+
         originalTable = new JTable(originalTableModel);
         scaledTable = new JTable(scaledTableModel);
 
@@ -108,28 +110,29 @@ public class PolilineasEscalacion extends JFrame {
 
         JScrollPane rightScrollPane = new JScrollPane(rightPanel);
         rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
+        rightScrollPane.setBorder(BorderFactory.createEmptyBorder());
 
 
-        JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
+        JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
         JPanel originalTablePanel = new JPanel(new BorderLayout());
-
         JLabel originalLabel = new JLabel("Puntos Originales", SwingConstants.CENTER);
         originalLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         originalTablePanel.add(originalLabel, BorderLayout.NORTH);
-        JScrollPane originalScrollPane = new JScrollPane(originalTable);
 
-        originalScrollPane.setPreferredSize(new Dimension(300, 200));
+
+        JScrollPane originalScrollPane = new JScrollPane(originalTable);
+        originalScrollPane.setPreferredSize(new Dimension(300, 150));
         originalTablePanel.add(originalScrollPane, BorderLayout.CENTER);
 
         JPanel scaledTablePanel = new JPanel(new BorderLayout());
-
         JLabel scaledLabel = new JLabel("Puntos Escalados: " + "Sx: " + sx + " Sy: " + sy, SwingConstants.CENTER);
+
         scaledLabel.setFont(new Font("Arial", Font.BOLD, 12)); // Set font to Arial, bold, size 18
         scaledTablePanel.add(scaledLabel, BorderLayout.NORTH);
-        JScrollPane scaledScrollPane = new JScrollPane(scaledTable);
 
-        scaledScrollPane.setPreferredSize(new Dimension(300, 200));
+        JScrollPane scaledScrollPane = new JScrollPane(scaledTable);
+        scaledScrollPane.setPreferredSize(new Dimension(300, 150));
         scaledTablePanel.add(scaledScrollPane, BorderLayout.CENTER);
 
         tablesPanel.add(originalTablePanel);

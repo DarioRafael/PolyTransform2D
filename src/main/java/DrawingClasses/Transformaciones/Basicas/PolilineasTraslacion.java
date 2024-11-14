@@ -116,7 +116,7 @@ public class PolilineasTraslacion extends JFrame {
         rightScrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         // Tables Panel
-        JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
+        JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
         // Original Table Panel
         JPanel originalTablePanel = new JPanel(new BorderLayout());

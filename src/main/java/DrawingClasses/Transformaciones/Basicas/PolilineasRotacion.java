@@ -33,8 +33,10 @@ public class PolilineasRotacion extends JFrame {
 
     public PolilineasRotacion() {
         setTitle("Transformaciones Geométricas 2D Básica: Rotacion");
+        setSize(1800, 960);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
         createComponents();
         configureLayout();
         addActionListeners();
@@ -97,12 +99,12 @@ public class PolilineasRotacion extends JFrame {
         add(planoCartesiano, BorderLayout.CENTER);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido
+        rightPanel.setPreferredSize(new Dimension(270, getHeight())); // Ajusta el tamaño preferido
 
         JScrollPane rightScrollPane = new JScrollPane(rightPanel);
-        rightScrollPane.setPreferredSize(new Dimension(250, getHeight())); // Ajusta el tamaño preferido del JScrollPane
+        rightScrollPane.setPreferredSize(new Dimension(270, getHeight())); // Ajusta el tamaño preferido del JScrollPane
 
-        JPanel tablesPanel = new JPanel(new GridLayout(2, 1, 5, 5));
+        JPanel tablesPanel = new JPanel(new GridLayout(3, 1, 5, 5));
 
         JPanel originalTablePanel = new JPanel(new BorderLayout());
 

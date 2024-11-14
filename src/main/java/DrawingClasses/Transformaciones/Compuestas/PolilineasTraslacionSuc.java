@@ -2,6 +2,9 @@ package DrawingClasses.Transformaciones.Compuestas;
 
 
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesCompuestas;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTBasicas.FormulaRotacion;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTBasicas.FormulaTraslacion;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaTraslacionSuc;
 import Plano.Transformaciones.Basicas.PlanoCartesianoTraslacion;
 import formasADibujar.Linea;
 import formasADibujar.Punto;
@@ -21,7 +24,7 @@ public class PolilineasTraslacionSuc extends JFrame {
     private DefaultTableModel originalTableModel;
     private DefaultTableModel translatedTableModel1;
     private DefaultTableModel translatedTableModel2;
-    private JButton backButton;
+    private JButton backButton, formulaButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
     private JTextField tx1Field;
@@ -73,6 +76,8 @@ public class PolilineasTraslacionSuc extends JFrame {
         ty2Field = new JTextField("-4", 5);
 
         backButton = new JButton("Menu");
+        formulaButton = new JButton("Formula");
+
         regenerarFigura = new JButton("Graficar");
         trasladar1Button = new JButton("Trasladar");
         trasladar2Button = new JButton("Trasladar");
@@ -112,7 +117,11 @@ public class PolilineasTraslacionSuc extends JFrame {
         JLabel titleLabel2 = new JLabel("Traslación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
-        topPanel.add(backButton, BorderLayout.WEST);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        buttonPanel.add(backButton);
+        buttonPanel.add(formulaButton);
+
+        topPanel.add(buttonPanel, BorderLayout.SOUTH);
         topPanel.add(titleLabel1, BorderLayout.NORTH);
         topPanel.add(titleLabel2, BorderLayout.CENTER);
 
@@ -206,6 +215,9 @@ public class PolilineasTraslacionSuc extends JFrame {
             clearPlanoAndData();
             new TransformacionesCompuestas().setVisible(true);
             dispose();
+        });
+        formulaButton.addActionListener(e -> {
+            new FormulaTraslacionSuc().setVisible(true);
         });
 
         regenerarFigura.addActionListener(e -> {

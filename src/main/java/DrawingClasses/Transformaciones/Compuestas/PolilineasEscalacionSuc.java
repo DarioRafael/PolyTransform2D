@@ -1,6 +1,8 @@
 package DrawingClasses.Transformaciones.Compuestas;
 
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesCompuestas;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaEscalacionSuc;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaTraslacionSuc;
 import Plano.Transformaciones.Compuestas.PlanoCartesianoEscalacionSuc;
 import formasADibujar.Linea;
 import formasADibujar.Punto;
@@ -20,7 +22,7 @@ public class PolilineasEscalacionSuc extends JFrame {
     private DefaultTableModel originalTableModel;
     private DefaultTableModel scaledTableModel1;
     private DefaultTableModel scaledTableModel2;
-    private JButton backButton;
+    private JButton backButton, formulaButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
     private JTextField sx1Field;
@@ -66,6 +68,8 @@ public class PolilineasEscalacionSuc extends JFrame {
         sy2Field = new JTextField("-1", 5);
 
         backButton = new JButton("Menu");
+        formulaButton = new JButton("Formula");
+
         regenerarFigura = new JButton("Graficar");
         escalarButton1 = new JButton("Escalar");
         escalarButton2 = new JButton("Escalar");
@@ -106,7 +110,11 @@ public class PolilineasEscalacionSuc extends JFrame {
         JLabel titleLabel2 = new JLabel("Escalación Sucesiva", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
-        topPanel.add(backButton, BorderLayout.WEST);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        buttonPanel.add(backButton);
+        buttonPanel.add(formulaButton);
+
+        topPanel.add(buttonPanel, BorderLayout.SOUTH);
         topPanel.add(titleLabel1, BorderLayout.NORTH);
         topPanel.add(titleLabel2, BorderLayout.CENTER);
 
@@ -203,6 +211,9 @@ public class PolilineasEscalacionSuc extends JFrame {
             clearPlanoAndData();
             new TransformacionesCompuestas().setVisible(true);
             dispose();
+        });
+        formulaButton.addActionListener(e -> {
+            new FormulaEscalacionSuc().setVisible(true);
         });
 
         regenerarFigura.addActionListener(e -> {
