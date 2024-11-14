@@ -145,6 +145,7 @@ public class FormulaTraslacionSucC extends JFrame {
         }
 
         centeredPanel.add(Box.createRigidArea(new Dimension(0, 20)));
+        centeredPanel.add(regresarButton);
         centeredPanel.add(aceptarButton);
 
         // Agregar panel centrado al panel principal
