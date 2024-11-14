@@ -1,6 +1,7 @@
 package DrawingClasses.Transformaciones.Basicas;
 
 import PaginaPrincipalFolder.Transformaciones.Componentes.TransformacionesBasicas;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTBasicas.FormulaRotacion;
 import Plano.Transformaciones.Basicas.PlanoCartesianoRotacion;
 import formasADibujar.Rotacion.Linea;
 import formasADibujar.Rotacion.Punto;
@@ -18,7 +19,7 @@ public class PolilineasRotacion extends JFrame {
     private JTable rotatedTable;
     private DefaultTableModel originalTableModel;
     private DefaultTableModel rotatedTableModel;
-    private JButton backButton;
+    private JButton backButton, formulaButton;
     private JTextField xInicialField;
     private JTextField yInicialField;
     public JTextField anguloField;
@@ -49,6 +50,7 @@ public class PolilineasRotacion extends JFrame {
         anguloField = new JTextField("0", 5);
 
         backButton = new JButton("Menu");
+        formulaButton = new JButton("Formula");
         regenerarFigura = new JButton("Graficar");
         rotarButton = new JButton("Rotar");
 
@@ -81,7 +83,12 @@ public class PolilineasRotacion extends JFrame {
         JLabel titleLabel2 = new JLabel("Rotación", SwingConstants.CENTER);
         titleLabel2.setFont(new Font("Arial", Font.BOLD, 18));
 
-        topPanel.add(backButton, BorderLayout.WEST);
+        // Create a panel to hold the Menu and Formulas buttons
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        buttonPanel.add(backButton);
+        buttonPanel.add(formulaButton);
+
+        topPanel.add(buttonPanel, BorderLayout.SOUTH);
         topPanel.add(titleLabel1, BorderLayout.NORTH);
         topPanel.add(titleLabel2, BorderLayout.CENTER);
 
@@ -153,6 +160,10 @@ public class PolilineasRotacion extends JFrame {
             new TransformacionesBasicas().setVisible(true);
             clearPlanoAndData();
             dispose();
+        });
+
+        formulaButton.addActionListener(e -> {
+            new FormulaRotacion().setVisible(true);
         });
 
         regenerarFigura.addActionListener(e -> {

@@ -117,8 +117,6 @@ public class PolilineasTraslacionSuc extends JFrame {
         topPanel.add(titleLabel2, BorderLayout.CENTER);
 
         add(topPanel, BorderLayout.NORTH);
-
-        // Panel central con el plano cartesiano
         add(planoCartesiano, BorderLayout.CENTER);
 
         // Panel derecho con tablas y controles
