@@ -56,7 +56,7 @@ public class FormulaRotacionSucC extends JFrame {
                 + "<tr><td>[</td><td>&nbsp;-Sen&nbsp;θ₂&nbsp;</td><td>&nbsp;Cos&nbsp;θ₂&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X' Y' 1] = [(X * Cos θ₂ - Y * Sen θ₂), (X * Sen θ₂ + Y * Cos θ₂), 1]</div></div></html>");
+                + "<div style='margin-top: 10px;'>[X'' Y'' 1] = [(X' * Cos θ₂ - Y' * Sen θ₂), (X' * Sen θ₂ + Y' * Cos θ₂), 1]</div></div></html>");
         matrizGeneral.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Procedimiento Particular
@@ -70,7 +70,7 @@ public class FormulaRotacionSucC extends JFrame {
                 + "<tr><td>[</td><td>&nbsp;-Sen&nbsp;θ₂&nbsp;</td><td>&nbsp;Cos&nbsp;θ₂&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X₁' Y₁' 1] = [(X₁ * Cos θ₂ - Y₁ * Sen θ₂), (X₁ * Sen θ₂ + Y₁ * Cos θ₂), 1]</div></div></html>");
+                + "<div style='margin-top: 10px;'>[X''₁ Y''₁ 1] = [(X'₁ * Cos θ₂ - Y'₁ * Sen θ₂), (X'₁ * Sen θ₂ + Y'₁ * Cos θ₂), 1]</div></div></html>");
         matrizParticular.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Sección de operaciones
