@@ -109,7 +109,7 @@ public class PolilineasTraslacion extends JFrame {
 
         // Right Panel with tables and controls
         JPanel rightPanel = new JPanel(new BorderLayout());
-        rightPanel.setPreferredSize(new Dimension(250, getHeight()));
+        rightPanel.setPreferredSize(new Dimension(0, getHeight()));
 
         JScrollPane rightScrollPane = new JScrollPane(rightPanel);
         rightScrollPane.setPreferredSize(new Dimension(250, getHeight()));

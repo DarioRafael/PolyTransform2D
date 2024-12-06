@@ -37,7 +37,7 @@ public class MenuTransformaciones {
         headerPanel.setBackground(BACKGROUND_COLOR);
 
         JLabel titleLabel = new JLabel("Transformaciones Geométricas en 2D ", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 32));
+        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 28));
         titleLabel.setForeground(TEXT_COLOR);
         headerPanel.add(titleLabel, BorderLayout.CENTER);
 
@@ -95,7 +95,7 @@ public class MenuTransformaciones {
         buttonContent.setOpaque(false);
 
         JLabel titleLabel = new JLabel(title, SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 18));
 
         JLabel descLabel = new JLabel(description, SwingConstants.CENTER);
         descLabel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
