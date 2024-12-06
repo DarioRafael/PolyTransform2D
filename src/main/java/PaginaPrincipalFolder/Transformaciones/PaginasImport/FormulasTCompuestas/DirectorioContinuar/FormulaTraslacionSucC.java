@@ -1,8 +1,8 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
-import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTBasicas.FormulaTraslacion;
-import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaRotacionSuc;
+import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.FormulaTraslacionSuc;
+
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -111,7 +111,7 @@ public class FormulaTraslacionSucC extends JFrame {
         regresarButton.setForeground(Color.BLUE);
         regresarButton.setFocusPainted(false);
         regresarButton.addActionListener(e -> {
-            new FormulaTraslacion().setVisible(true);
+            new FormulaTraslacionSuc().setVisible(true);
             dispose();
         });
 

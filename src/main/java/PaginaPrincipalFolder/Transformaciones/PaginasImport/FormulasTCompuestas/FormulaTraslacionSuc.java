@@ -1,7 +1,6 @@
 package PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas;
 
 import PaginaPrincipalFolder.Settings.AjustesVentanaFormula;
-import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar.FormulaRotacionSucC;
 import PaginaPrincipalFolder.Transformaciones.PaginasImport.FormulasTCompuestas.DirectorioContinuar.FormulaTraslacionSucC;
 
 import javax.swing.*;
