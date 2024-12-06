@@ -63,13 +63,13 @@ public class FormulaTraslacionSuc extends JFrame {
         JLabel pxyParticularLabel = createContentLabel("P1(X1, Y1):");
 
         JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
-                + "[X₁' Y₁' 1] = [X₁ Y₁ 1] · "
+                + "[X'₁ Y'₁ 1] = [X₁ Y₁ 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;1&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>Tx₁</td><td>Ty₁</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X₁' Y₁' 1] = [X₁+Tx₁ Y₁+Ty₁ 1]</div></div></html>");
+                + "<div style='margin-top: 10px;'>[X'₁ Y'₁ 1] = [X₁+Tx₁ Y₁+Ty₁ 1]</div></div></html>");
         matrizParticular.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Sección de operaciones

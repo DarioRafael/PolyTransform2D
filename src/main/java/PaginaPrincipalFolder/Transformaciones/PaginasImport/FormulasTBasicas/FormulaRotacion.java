@@ -47,7 +47,7 @@ public class FormulaRotacion extends JFrame {
         JLabel procGeneralLabel = createSectionLabel("Procedimiento General");
         JLabel pxyGeneralLabel = createContentLabel("P(X, Y):");
 
-        JLabel matrizGeneral = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
+        JLabel matrizGeneral = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 12px;'>"
                 + "[X' Y' 1] = [X Y 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;Cos&nbsp;θ&nbsp;</td><td>&nbsp;Sen&nbsp;θ&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
@@ -61,7 +61,7 @@ public class FormulaRotacion extends JFrame {
         JLabel procParticularLabel = createSectionLabel("Procedimiento Particular");
         JLabel pxyParticularLabel = createContentLabel("P1(X1, Y1):");
 
-        JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
+        JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 12px;'>"
                 + "[X₁' Y₁' 1] = [X₁ Y₁ 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;Cos&nbsp;θ&nbsp;</td><td>&nbsp;Sen&nbsp;θ&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"

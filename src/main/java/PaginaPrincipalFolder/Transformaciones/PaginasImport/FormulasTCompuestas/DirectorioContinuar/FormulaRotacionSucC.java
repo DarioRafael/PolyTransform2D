@@ -49,7 +49,7 @@ public class FormulaRotacionSucC extends JFrame {
         JLabel procGeneralLabel = createSectionLabel("Procedimiento General");
         JLabel pxyGeneralLabel = createContentLabel("P'(X', Y'):");
 
-        JLabel matrizGeneral = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
+        JLabel matrizGeneral = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 12px;'>"
                 + "[X'' Y'' 1] = [X' Y' 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;Cos&nbsp;θ₂&nbsp;</td><td>&nbsp;Sen&nbsp;θ₂&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
@@ -63,7 +63,7 @@ public class FormulaRotacionSucC extends JFrame {
         JLabel procParticularLabel = createSectionLabel("Procedimiento Particular");
         JLabel pxyParticularLabel = createContentLabel("P'1(X'1, Y'1):");
 
-        JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 14px;'>"
+        JLabel matrizParticular = new JLabel("<html><div style='text-align: center; font-family: Courier New; font-size: 12px;'>"
                 + "[X''₁ Y''₁ 1] = [X'₁ Y'₁ 1] · "
                 + "<table align='center' style='margin-top: 10px;'>"
                 + "<tr><td>[</td><td>&nbsp;Cos&nbsp;θ₂&nbsp;</td><td>&nbsp;Sen&nbsp;θ₂&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
@@ -85,9 +85,9 @@ public class FormulaRotacionSucC extends JFrame {
         ));
 
         JLabel[] operaciones = {
-                new JLabel("<html><div style='font-family: Courier New; font-size: 14px;'>X'(Cos θ₂) + Y'(-Sen θ₂) + 1(0) = X' · Cos θ₂ - Y' · Sen θ₂</div></html>"),
-                new JLabel("<html><div style='font-family: Courier New; font-size: 14px;'>X'(Sen θ₂) + Y'(Cos θ₂) + 1(0) = X' · Sen θ₂ + Y' · Cos θ₂</div></html>"),
-                new JLabel("<html><div style='font-family: Courier New; font-size: 14px;'>X'(0) + Y'(0) + 1(1) = 1</div></html>")
+                new JLabel("<html><div style='font-family: Courier New; font-size: 12px;'>X'(Cos θ₂) + Y'(-Sen θ₂) + 1(0) = X' · Cos θ₂ - Y' · Sen θ₂</div></html>"),
+                new JLabel("<html><div style='font-family: Courier New; font-size: 12px;'>X'(Sen θ₂) + Y'(Cos θ₂) + 1(0) = X' · Sen θ₂ + Y' · Cos θ₂</div></html>"),
+                new JLabel("<html><div style='font-family: Courier New; font-size: 12px;'>X'(0) + Y'(0) + 1(1) = 1</div></html>")
         };
         // Botón Aceptar
         JButton aceptarButton = new JButton("Aceptar");
