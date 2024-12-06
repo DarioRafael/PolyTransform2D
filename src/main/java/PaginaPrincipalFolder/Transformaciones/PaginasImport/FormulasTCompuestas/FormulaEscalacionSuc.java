@@ -56,7 +56,7 @@ public class FormulaEscalacionSuc extends JFrame {
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;Sy₁&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X' Y' 1] = [X·Sx₁ Y·Sy₁ 1]</div></div></html>");
+                + "<div style='margin-top: 10px; font-size: 12px; color: red;'>[X' Y' 1] = [X·Sx₁ Y·Sy₁ 1]</div></div></html>");
         matrizGeneral.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Procedimiento Particular
@@ -70,7 +70,7 @@ public class FormulaEscalacionSuc extends JFrame {
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;Sy₁&nbsp;</td><td>&nbsp;0&nbsp;</td><td>]</td></tr>"
                 + "<tr><td>[</td><td>&nbsp;0&nbsp;</td><td>&nbsp;0&nbsp;</td><td>&nbsp;1&nbsp;</td><td>]</td></tr>"
                 + "</table>"
-                + "<div style='margin-top: 10px;'>[X'₁ Y'₁ 1] = [X₁·Sx₁ Y₁·Sy 1]</div></div></html>");
+                + "<div style='margin-top: 10px; font-size: 12px; color: red;'>[X'₁ Y'₁ 1] = [X₁·Sx₁ Y₁·Sy 1]</div></div></html>");
         matrizParticular.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Sección de operaciones
