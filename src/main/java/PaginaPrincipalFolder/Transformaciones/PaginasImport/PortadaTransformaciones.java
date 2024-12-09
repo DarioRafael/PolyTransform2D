@@ -23,7 +23,7 @@ public class PortadaTransformaciones extends JFrame {
 
     private void configurarVentana() {
         setTitle("Transformaciones Geométricas en 2D");
-        setMinimumSize(new Dimension(800, 600)); // Reducido significativamente
+        setMinimumSize(new Dimension(800, 550)); // Reducido significativamente
         setPreferredSize(ajustesVentana.getWindowSize()); // Tamaño preferido más pequeño
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
